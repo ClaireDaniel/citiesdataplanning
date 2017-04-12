@@ -1,0 +1,209 @@
+/* responsive web design settings*/
+
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.footer {
+	position:relative;
+	top:10px;
+	height: 65px;
+	margin:auto;
+	padding: 10px;
+	background-color:rgb(254, 223, 154);
+}
+
+.footerInfo{
+	font-size:10px;
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(140,140,140);
+	font-size: 10px;
+	line-height: 150%;
+	line-height:140%;
+	position: absolute;
+	top: 20px;
+	right: 20px;	
+}
+
+/* For desktop*/
+@media only screen and (min-width:768px){
+.banner {
+	width:768px;
+}
+.content{
+	width: 768px;
+}
+
+.footer{
+	width: 768px;
+}
+
+}
+
+/* Default*/
+.mobileAboutText{
+	top:0px;
+	position:relative;
+	left: 15px;
+	padding:20px;
+	height:250px;
+}
+
+.mobileHeading {
+	width: 280px;
+	margin: 0 auto;
+	transform: translate(0%, 40%);
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(14,44,62);
+	white-space: nowrap;
+	font-size: 27px;
+	background-color: rgb(255,255,255);
+	padding:10px;
+}
+
+.mobileSubheading {
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(14,44,62);
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+.mobileDate{
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(14,44,62);
+	font-size: 14px;
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
+.mobileText{
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	font-size: 12px;	
+	text-align: justify;
+	line-height:120%;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+
+.mobileBanner {
+	position:relative;
+	top:10px;
+	height: 150px;
+	margin:auto;
+	background-color:green;
+	background-image: url('images/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.mobileContent {
+	position:relative;
+	top:10px;
+	height: auto;
+	margin:auto;
+	padding: 10px;
+}
+
+
+
+.mobileTabs {
+	padding:10px;
+	background-color:rgb(255,255,255);
+	box-sizing: border-box;
+	width:225px;
+	height: 40px;
+	bottom:20px;
+	margin: 0 auto;
+	transform: translate(0%, 100%);
+}
+
+.mobileTab {
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(14,44,62);
+	font-size: 16px;
+	padding: 10px;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.mobileTab:hover{
+	color:rgb(226,69,48);
+}
+
+.MobileTab:active{
+	text-decoration: underline;
+}
+
+.mobilePortrait{
+	position:relative;
+	float: left;
+	width: 100px;
+	top:20px;
+	left:0px;
+}
+
+/* For larger media */
+@media only screen and (min-width:450px){
+.banner{
+	height: 192px;
+}
+	
+.heading {
+	font-size:40px;
+	width: auto;
+	transform: translate(0%, 0%);
+	position:absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.subheading{
+	font-size: 20px;
+	padding-top:20px;
+}
+
+.tab {
+	font-size:25px;
+}
+
+.tabs{
+	position:absolute;
+	width:302px;
+	bottom: 20px;
+	right: 20px;
+	height: 50px;
+	transform: translate(0%, 0%);
+}
+
+.date{
+	font-size:18px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.text{
+	font-size: 14px;
+	line-height:140%;
+}
+
+.aboutText{
+	top:10px;
+}
+
+.portrait{
+	width: 150px;
+}
+
+}
+
+
+
