@@ -49,6 +49,9 @@
 }
 
 /* Default*/
+
+
+
 .mobileAboutText{
 	top:0px;
 	position:relative;
@@ -74,6 +77,14 @@
 	color: rgb(14,44,62);
 	font-size: 16px;
 	padding-top: 10px;
+}
+
+.mobilePastLinks{
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	color: rgb(14,44,62);
+	font-size: 16px;
+	padding-top: 10px;
+	text-decoration: underline;
 }
 
 .mobileDate{
