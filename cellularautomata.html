@@ -1,0 +1,67 @@
+<h2 class = "subheading mobileSubheading"> Fake It Till You Make It</h2>
+<p class = "text mobileText"></p> 
+<h3><i>(An idea to test an Open Planning Data Specification)</i></h3>
+		
+		<p class ="date mobileDate"> 31 July 2018</p>
+		
+		<p class = "text mobileText">My previous post outlines the case for a standard format to collect and publish planning data, and includes a rough sketch of what such an ‘Open Planning Data Specification’ might look like. Standardising data is a pre-requisite to realising the benefits of a truly digital planning system, ensuring planners, politicians, the community and the software applications they use can keep track of development through each stage and across the entire city.  </p>
+		
+		<p class = "text mobileText"><p style="text-align:center;"><img src="images/standard_open_planning_data.png" width = '500' style="max-width:100%;"></p></p>
+		<p class = "caption mobileCaption" style="text-align:center;">Standardised Open Planning Data is the foundation soil in which digital planning can flourish...</p>
+		
+		
+		
+		<p class = "text mobileText">As I see it, we have two options for testing this idea:</p>
+		<p class = "text mobileText"><b>Option One:</b> Spend weeks trying to clean and reformat data from multiple sources, assuming it is possible to line up records from different agencies and authorities. It may not be.</p>
+		<p class = "text mobileText"><b>Option Two:</b> Synthesise the data (i.e. fake it).</p>
+		<p class = "text mobileText">How do we manually create data for the hundreds of thousands of development records that make up a city? We don’t. Instead we leave the computer running and let our city grow.</p>
+		<p class = "text mobileText">What I am proposing is a cellular automaton model. Cellular automata are a type of iterative model made up of a field of cells that replicate themselves or die according to very simple rules. People tend to get excited about them due to the complex structures and patterns that result, mimicking biological systems. It is a technique used in generative architecture and design.  </p>
+		
+		<p class = "text mobileText"><p style="text-align:center;"><img src="images/cellular_automata_giphy.gif" width = '200' style="max-width:100%;"></p></p>
+		<p class = "caption mobileCaption" style="text-align:center;">Simple cellular automaton model generating complex structures (source: Giphy)</p>		
+		
+		<p class = "text mobileText">Cellular automata have long been used by academics to study the growth of cities. The models allow the exploration of the main drivers of a city’s development by adjusting the underlying rules to try and simulate the real spatial pattern of growth. Once a model has been refined to the point that it is able to, more or less, recreate historical growth patterns, it is sometimes run into the future as a predictive tool for future development.</p>
+
+		<p class = "text mobileText"><p style="text-align:center;"><img src="images/yan_liu.PNG" width = '500' style="max-width:100%;"></p></p>
+		<p class = "caption mobileCaption" style="text-align:center;">Image from an excellent publication by Yan Liu (2012) <a href = 'https://doi.org/10.1080/13658816.2011.577434' target = '_blank' style="font-weight:bold" > Modelling sustainable urban growth in a rapidly urbanising region using a fuzzy-constrained cellular automata approach</a></p>		
+		
+		<p class = "text mobileText">Whilst a great academic tool have I ever seen it used for this purpose in a practical setting? Not personally. Do I think it should be? To be honest, I am yet to be convinced*. Would any of my planning colleagues be able to tell me what cellular automata are? Probably not. </p>
+		
+		<p class = "text mobileText">… this is beside the point though. What cellular automata modelling may instead offer us in a practical sense is the ability to generatively synthesise a lot of planning data. Using a simple layout of a rectangular grid we can easily make a model that subdivides and grows, development approval by development approval, somewhat randomly, according to simple probability functions describing things like:</p>
+
+		<ul class = "text mobileText" style = "list-style-position: inside;">
+			<li>The desired land use mix.</li>
+			<li>The likelihood for a certain site to be chosen with regard to:</li>
+				<ul style = "padding-left: 20px;">
+					<li>Neighbouring development </li>
+					<li>Access to infrastructure</li>
+					<li>Age of existing development</li>
+					<li>Other desired constraints or incentives</li>
+				</ul>
+			<li>The form of the development proposal with regards to height, floorspace and number of dwellings.</li>
+			<li>The likelihood of a development proposal to be approved with regards to the proposed form and constraints</li>
+			<li>The likelihood of an approved development to be modified. </li>
+			<li>The likelihood of an approved development to be completed before the permit expires.</li>
+		</ul>
+		
+		<p class = "text mobileText"><p style="text-align:center;"><img src="images/automata_lot_gif.gif" width = '200' style="max-width:100%;"></p></p>
+
+		<p class = "text mobileText">At each iteration of the model the relevant information regarding the subdivision, approval and completion can be recorded in the desired format. When the model has generated enough data the model can be stopped and the data can be taken and tested to see if the format is easy to use and records enough information to track development to recreate the growth of the city. Perhaps it could be used to create demo software applications. </p>
+		<p class = "text mobileText">For this purpose, does it matter if the model is not exactly recreating the historic development of a real city? Not really, although adjustments could always be made to make it better.</p>
+		<p class = "text mobileText">To demonstrate I have even made a start on my own code which I have put 
+									here. 
+									‘Fakefield City’ starts out as a series of large equally sized rectangular rural land holdings which are later subdivided into equally sized rectangular city blocks which can be further subdivided into lots. The size of the lot depends on the nature of the development but to keep things simple it is currently always a multiple of the smallest permissible size. This code uses the igraph package in Python to pre-define every possible land subdivision and the relationship between neighbouring lots and transport infrastructure.</p>
+		<p class = "text mobileText">If you are looking at the code, at this point I really have only set it up to create a blank slate. The animation uses only a few simple development rules that do not involve randomisation:</p>
+		<ul class = "text mobileText" style = "list-style-position: inside;">
+			<li>Get as close to the centre as possible </li>
+			<li>Try to maintain set proportions of land use by area</li>
+			<li>Use undeveloped land neighbouring existing development (of the same type) first</li>
+		</ul>
+		
+		<p class = "text mobileText"><p style="text-align:center;"><img src="images/combined_gif.gif" width = '400' style="max-width:100%;"></p></p>
+		<p class = "caption mobileCaption" style="text-align:center;">Animation showing underlying igraph network for Fakefield City cellular automata model. Different colours represent different land use types.</p>
+		
+		
+		
+		<p class = "text mobileText">I have not yet set it up to record data, although I do have the geometry for the subdivision working. Nevertheless, I hope it already it serves to illustrate the concept.  </p>
+		<p class = "text mobileText">So, a bit of a strange idea. Could it work? If it does would it help? Let me know your thoughts on <a href = 'https://www.linkedin.com/in/claire-daniel-3418304'>LinkedIn</a> or Twitter <a href=https://twitter.com/ClaireCities>@ClaireCities</a>!</p>
