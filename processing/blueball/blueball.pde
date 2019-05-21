@@ -136,7 +136,6 @@ void draw(){
     }
   }
   
-  saveFrame("line-######.jpg");
 }
 
 //Determine what direction and initial speed when ball is released
