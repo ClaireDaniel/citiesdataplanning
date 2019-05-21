@@ -1,5 +1,7 @@
 // Author: Claire Daniel, building from generic example https://processing.org/examples/bounce.html
 
+color startCol = color(255,0,0); //Starting color for ball
+
 int rad = 20;        // Width of the ball
 float w = 300;       // Width of the screen
 float half = w/2;    // Half width of the screen
@@ -64,7 +66,7 @@ void draw(){
     //Draw ball
     xposCircle = bezierPoint(0, xpos, xpos, w, 0.5);
     yposCircle = bezierPoint(0, ypos, ypos, w, 0.5);
-    fill(255,0,0);
+    fill(startCol);
     noStroke();
     ellipse(xposCircle, yposCircle, rad,rad);
     
@@ -129,10 +131,12 @@ void draw(){
     //Otherwise starting position for the ball
     if (released == false) {
       noStroke();
-      fill(255,0,0);
+      fill(startCol);
       ellipse(half, half, rad, rad);
     }
   }
+  
+  saveFrame("line-######.jpg");
 }
 
 //Determine what direction and initial speed when ball is released
