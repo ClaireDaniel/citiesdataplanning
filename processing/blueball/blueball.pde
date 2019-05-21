@@ -135,7 +135,7 @@ void draw(){
       ellipse(half, half, rad, rad);
     }
   }
-  
+
 }
 
 //Determine what direction and initial speed when ball is released
