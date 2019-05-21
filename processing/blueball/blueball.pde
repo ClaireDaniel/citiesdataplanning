@@ -1,3 +1,5 @@
+// Author: Claire Daniel, building from generic example https://processing.org/examples/bounce.html
+
 int rad = 20;        // Width of the ball
 float w = 300;       // Width of the screen
 float half = w/2;    // Half width of the screen
