@@ -1,38 +1,3 @@
-<!DOCTYPE html>
-<html lang="en-AU">
-<head>
-	<!-- Responsive web design section-->
-	<meta name="viewport" content="width=device-width, intial-scale=1.0">
-	
-	<title>Cities, Data, Planning</title>
-	<link rel="stylesheet" href="../styles.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-</head>
-
-<body>
-
-<!-- Banner Section-->
-	<div class='banner mobileBanner'>
-		
-		<h1 class="heading mobileHeading">Cities Data Planning</h1>
-
-		
-		<div class="tabs mobileTabs">
-			<a href="../index.html" class="tab mobileTab" id="homeB">Home<a/>
-			<a href="../articles.html" class="tab mobileTab" id="articlesB">Articles</a>
-			<a href="../about.html" class="tab mobileTab" id="abountB">About</a>
-		</div>
-		
-	</div>
-	
-	<div id='article' class="content mobileContent">
-	<div id='buttons' class="content mobileContent">
-	
-	
-
 <h2 class = "subheading mobileSubheading"> Towards a Monitoring System for Planning Policy <br /> <i> Book Chapter Published</i></h2>
 		
 		<p class ="date mobileDate"> 16 July 2017</p>
@@ -42,7 +7,7 @@
 		<p class = "text mobileText">Despite this, improved computing and new data sources can now assist with what once would have been a labour intensive task, compiling the hundreds or thousands of development and land use records required to keep track of a growing city. My paper <a href = 'https://link.springer.com/chapter/10.1007/978-3-319-57819-4_2' target = '_blank' style="font-weight:bold" >‘Towards the Development of a Monitoring System for Planning Policy’</a> was recently published as a book chapter in <a href='http://www.springer.com/gp/book/9783319578187' target = '_blank' style="font-weight:bold">‘Planning Support Science for Smarter Urban Futures’</a> edited by Geertman et al. (2017) and presented at the Computers in Urban Planning and Urban Management conference in Adelaide last week. It outlines how I designed and programmed a prototype application to undertake the task of monitoring planning policy. The prototype is limited to residential land uses but successfully demonstrates how data can be brought together to measure the achievement of common planning objectives in an automated fashion.  </p>
 		
 		<p class = "text mobileText">Key to the design of the system was the need for output to retain spatial detail. Traditionally plan monitoring indicators are reported at a city-wide or other large sub-district scale.</p> 
-		<p style="text-align:center;"><img src="../images/GLA.png" width = '500' style="max-width:100%;"> </p>
+		<p style="text-align:center;"><img src="images/GLA.png" width = '500' style="max-width:100%;"> </p>
 		<p class = "caption mobileCaption" style="text-align:center;">Extract from the 2014/15 Annual Monitoring Report of the Greater London Authority</p>
 		
 		<p class = "text mobileText">Whilst this does give insight about the development of a city, it is of limited use to planners in identifying precisely where infrastructure investments should be made or where existing policy might be going wrong. </p>
@@ -50,13 +15,13 @@
 		
 		<p class = "text mobileText">Point maps of the existing and new development sites retain this spatial detail. Kernel density (i.e. heat mapping) techniques are used to turn point measurements into a continuous surfaces of pixels.</p>
 		
-		<p style="text-align:center;"><img src="../images/London1.png" width = '500' style="max-width:100%;"></p>
+		<p style="text-align:center;"><img src="images/London1.png" width = '500' style="max-width:100%;"></p>
 		<p class = "caption mobileCaption" style="text-align:center;">Kernel density map of completed development records in London coloured by dwelling intensity (April 2011–2015). <br /> <i>Data sourced from the London Development Database.</i><p>
 		
 		
 		<p class = "text mobileText">Various measurements can then be made to compare two or more surfaces, for example, different snapshots in time or different variables, such as the dwelling diversity map of recent development for London shown below. </p>
 		
-		<p style="text-align:center;"><img src="../images/London2.png" width = '500' style="max-width:100%;"></p>
+		<p style="text-align:center;"><img src="images/London2.png" width = '500' style="max-width:100%;"></p>
 		<p class = "caption mobileCaption" style="text-align:center;">Diversity surface for completed residential development in London (2006–2016) by number of bedrooms <br /> <i>Data sourced from the London Development Database.</i><p>
 		
 		
@@ -64,7 +29,7 @@
 		
 		<p class = "text mobileText">Although the measurements don’t define what score is inherently ‘good’ or ‘bad’ they can show what areas of the city are doing relatively better or worse in the achievement of a particular objective. This can be seen clearly in the point map below showing distance to frequent public transport from new residential development sites in Chicago. </p>
 		
-		<p style="text-align:center;"><img src="../images/Chicago.png" width = '500' style="max-width:100%;"></p>
+		<p style="text-align:center;"><img src="images/Chicago.png" width = '500' style="max-width:100%;"></p>
 		<p class = "caption mobileCaption" style="text-align:center;">Left: Number of public transport services per stop from 06:00 to 09:00 on a Wednesday, Cityof Chicago
 		<br /> Right: Distance along road network to a public transport stop serviced on average at least every 10 minutes or more during morning peak hour
 		<br /><i>Data sourced from Chicago Transit Authority GTFS and City of Chicago Building Permits.</i><p>
@@ -74,7 +39,7 @@
 		
 		<p class = "text mobileText">The prototype system uses scripts to clean the data, make calculations and image tiles, and then upload these outputs to a server from where they are visualised in an interactive mapping application. The application allows users to explore available information to a degree impractical in a traditional paper or pdf report. Users can pan and zoom to specific sites of interest and customise display classifications. </p>
 		
-		<p style="text-align:center;"><img src="../images/website.png" width = '500' style="max-width:100%;"></p>
+		<p style="text-align:center;"><img src="images/website.png" width = '500' style="max-width:100%;"></p>
 		<p class = "caption mobileCaption" style="text-align:center;">Web interface to prototype monitoring system</p>
 		
 		<p class = "text mobileText"> These are just a few points from the work that I particularly wanted to share. The publication includes a literature review and in depth description of the case study cities, and the data and methods used to process it. It also contains much more discussion about practical application, limitations and further work. Feel free to contact me via <a href = 'https://www.linkedin.com/in/claire-daniel-3418304'> LinkedIn</a> or Twitter <a href=https://twitter.com/ClaireCities>@ClaireCities</a> if you would like to follow up on anything.</p>
@@ -83,16 +48,3 @@
 		<p class = "text mobileText"><i> This work was undertaken as part of the MSc in Smart Cities and Urban Analytics at the <a href ='https://www.ucl.ac.uk/bartlett/casa/'> Centre for Advanced Spatial Analysis (CASA) </a> University College London (UCL) under the supervision of Prof Michael Batty and Dr Elsa Arcaute.</i></p>
 	
 		<p class = "text mobileText" style="color:grey;"><i>Website currently under development, more features to be added over time</i></p>
-
-	</div>
-	</div>
-	
-	<div class = "footer">
-		<div class = "footerInfo">
-			<a href=https://twitter.com/ClaireCities><img src="../images/twitter.png" height=10px width=12px>@ClaireCities</a>
-			<p>Last updated 22 May 2019</p>
-			<p>Copyright © 2019 Claire Daniel </p>
-		</div>
-	</div>
-
-</body>
