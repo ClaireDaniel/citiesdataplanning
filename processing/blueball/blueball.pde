@@ -143,6 +143,22 @@ void draw(){
 
 //Determine what direction and initial speed when ball is released
 void mouseReleased(){
+  
+    xpos = mouseX;
+    ypos = mouseY;
+
+    if (xpos > w){
+      xpos = w;
+    }
+    if (xpos < 0){
+      xpos = 0; 
+    }
+    if (ypos > w){
+      ypos = w;
+    }
+    if (ypos < 0){
+      ypos = 0; 
+    }
     
   released = true;
 
