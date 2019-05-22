@@ -33,41 +33,6 @@ void setup(){
 }
 
 
-void mouseDragged(){
-  
-    background(0);
-    xpos = mouseX;
-    ypos = mouseY;
-
-    if (xpos > w){
-      xpos = w;
-    }
-    if (xpos < 0){
-      xpos = 0; 
-    }
-    if (ypos > w){
-      ypos = w;
-    }
-    if (ypos < 0){
-      ypos = 0; 
-    }
-
-    //Draw rubber band
-    noFill();
-    stroke(255);
-    strokeWeight(4);
-    bezier(0,0, xpos, ypos, xpos, ypos, w, w);
-    
-    //Draw ball
-    xposCircle = bezierPoint(0, xpos, xpos, w, 0.5);
-    yposCircle = bezierPoint(0, ypos, ypos, w, 0.5);
-    fill(startCol);
-    noStroke();
-    ellipse(xposCircle, yposCircle, rad,rad);
-}
-  
-
-
 void draw(){
   
   i = i + 1; //Count iterations
